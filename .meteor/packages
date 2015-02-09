@@ -12,3 +12,6 @@ useraccounts:bootstrap
 accounts-password
 
 zimme:iron-router-active
+aldeed:autoform
+aldeed:autoform-bs-datepicker
+aldeed:collection2
