@@ -1,10 +1,12 @@
 # Route Controllers
 
-Example controller
-
-```
-@RouteControllers =
-  example: RouteController.extend
-    waitOn: -> Meteor.subscribe 'example'
-    data: -> someDataExample: ExampleCollection.find()
-```
+    @RouteControllers =
+      userApplications: RouteController.extend
+        waitOn: ->
+          [
+            Meteor.subscribe 'userApplications'
+            Meteor.subscribe 'metaApplications'
+          ]
+        data: ->
+          metaApplications: MetaApplications.find().fetch()
+          userApplications: GeneralSupportApplications.find().fetch()

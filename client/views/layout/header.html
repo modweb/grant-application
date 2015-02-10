@@ -11,8 +11,8 @@
       </div>
       <div class='navbar-collapse collapse navbar-responsive-collapse'>
         <ul class='nav navbar-nav'>
-          <li class='{{isActiveRoute regex="home"}}'><a href='{{pathFor "home"}}'>Home</a></li>
           {{#if currentUser}}
+            <li><a href='{{pathFor "myApplications"}}'>My Applications</a></li>
             <li class='logout'><a href='{{pathFor "atSignIn"}}'>Logout</a></li>
           {{else}}
             <li class='{{isActiveRoute regex="atSignIn"}}'><a href='{{pathFor "atSignIn"}}'>Sign In</a></li>

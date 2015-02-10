@@ -1,0 +1,13 @@
+<template name='applicationListItem'>
+  <div class='jumbotron'>
+    <span class='h4'>{{name}}</span><br>
+    Deadline <b>{{> dateUTC value=deadlineDate}}</b><br>
+    {{#if userApplication}}
+      <button class='btn btn-info'>Open</button>
+      <button class='btn btn-warning'>Preview</button>
+      <button class='btn btn-success'>Submit</button>
+    {{else}}
+      <button class='btn btn-primary start-application'>Start</button>
+    {{/if}}
+  </div>
+</template>

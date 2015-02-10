@@ -230,21 +230,35 @@ inspires and challenges the community.'
 ## Application Schemas
 
     @GeneralSupportApplicationsSchema = new SimpleSchema
+      metaApplicationId:
+        type: String
+      userId:
+        type: String
+        autoValue: ->
+          if this.isInsert
+            return this.userId
+          else
+            this.unset()
       organizationalIntro:
         type: OrganizationalIntroSubschema
         label: 'Organizational Introduction'
+        optional: true
       publicBenefitAndAccess:
         type: PublicBenefitAndAccessSubschema
         label: 'Public Benefit and Access'
+        optional: true
       artisticAndCulturalVibrancy:
         type: ArtisticAndCulturalVibrancySubschema
         label: 'Artistic snd Cultural Vibrancy'
+        optional: true
       organizationalCapacity:
         type: OrganizationalCapacitySubschema
         label: 'Organizational Capacity'
+        optional: true
       organizationalGoals:
         type: OrganizationalGoalsSubschema
         label: 'Organizational Goals'
+        optional: true
 
     @GeneralSupportApplications = new Mongo.Collection 'generalSupportApplications'
     GeneralSupportApplications.attachSchema GeneralSupportApplicationsSchema
