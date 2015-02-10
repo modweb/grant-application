@@ -8,5 +8,3 @@ Combine available applications with user applications
           userApplication = _.findWhere userApplications, metaApplicationId: metaApplication._id
           metaApplication.userApplication = userApplication if userApplication?
           return metaApplication
-        console.log applications
-        return applications

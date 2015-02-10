@@ -22,6 +22,13 @@ TODO: add regex to shortcode
         autoform:
           type: 'bootstrap-datepicker'
 
+Sections are defined by subschemas. For now, this will not work if these
+properties don't match properties on the application schema.
+
+      sections:
+        type: [String]
+        label: 'Sections'
+
     @MetaApplications = new Mongo.Collection 'metaApplications'
     MetaApplications.attachSchema MetaApplicationsSchema
 

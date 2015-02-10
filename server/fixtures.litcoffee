@@ -7,10 +7,23 @@
         name: 'Community Arts Development Grant Application'
         shortcode: 'comm-arts-dev'
         deadlineDate: new Date Date.UTC 2015, 5, 25
+        sections: [
+          'organizationalIntro'
+          'publicBenefitAndAccess'
+          'artisticAndCulturalVibrancy'
+          'organizationalCapacity'
+        ]
       ,
         name: 'General Operating Support Grant Application'
         shortcode: 'gen-op-support'
         deadlineDate: new Date Date.UTC 2015, 6, 30
+        sections: [
+          'organizationalIntro'
+          'publicBenefitAndAccess'
+          'artisticAndCulturalVibrancy'
+          'organizationalCapacity'
+          'organizationalGoals'
+        ]
       ]
 
       countInserted = 0
