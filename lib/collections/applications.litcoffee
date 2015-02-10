@@ -4,7 +4,7 @@
 
 Meta-Applications describe information about the application.
 
-    MetaApplications = new SimpleSchema
+    MetaApplicationsSchema = new SimpleSchema
       name:
         type: String
         label: 'Application Name'
@@ -21,6 +21,9 @@ TODO: add regex to shortcode
         label: 'Deadline Date'
         autoform:
           type: 'bootstrap-datepicker'
+
+    @MetaApplications = new Mongo.Collection 'metaApplications'
+    MetaApplications.attachSchema MetaApplicationsSchema
 
 ## Application Subschemas
 
