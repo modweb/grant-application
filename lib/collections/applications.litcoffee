@@ -236,29 +236,63 @@ inspires and challenges the community.'
         type: String
         autoValue: ->
           if this.isInsert
-            return this.userId
+            return Meteor.userId()
           else
             this.unset()
       organizationalIntro:
         type: OrganizationalIntroSubschema
         label: 'Organizational Introduction'
-        optional: true
+        optional: yes
       publicBenefitAndAccess:
         type: PublicBenefitAndAccessSubschema
         label: 'Public Benefit and Access'
-        optional: true
+        optional: yes
       artisticAndCulturalVibrancy:
         type: ArtisticAndCulturalVibrancySubschema
         label: 'Artistic snd Cultural Vibrancy'
-        optional: true
+        optional: yes
       organizationalCapacity:
         type: OrganizationalCapacitySubschema
         label: 'Organizational Capacity'
-        optional: true
+        optional: yes
       organizationalGoals:
         type: OrganizationalGoalsSubschema
         label: 'Organizational Goals'
-        optional: true
+        optional: yes
 
     @GeneralSupportApplications = new Mongo.Collection 'generalSupportApplications'
     GeneralSupportApplications.attachSchema GeneralSupportApplicationsSchema
+
+## Applications Meteor Methods
+
+    Meteor.methods
+
+Create a new application
+
+      createApplication: (shortcode) ->
+
+Check the user is logged in
+
+        throw new Meteor.Error 'logged-out', 'You must be logged in to create an application' if not this.userId?
+
+Lookup meta-app by shortcode
+
+        criteria =
+          shortcode: shortcode
+        metaApplication = MetaApplications.findOne criteria
+        throw new Meteor.Error 'unknown-shortcode', "Could not find a meta application with shortcode #{shortcode}" if not metaApplication?
+
+Check to see if the user already has an application
+
+        criteria =
+          metaApplicationId: metaApplication._id
+          userId: this.userId
+        hasExistingApplication = (GeneralSupportApplications.find criteria).count() > 0
+        throw new Meteor.Error 'existing-application', "You already have an existing application for meta-app #{metaApplication._id}" if hasExistingApplication
+
+Create the application
+
+        application =
+          metaApplicationId: metaApplication._id
+
+        GeneralSupportApplications.insert application
