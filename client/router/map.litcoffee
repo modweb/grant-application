@@ -7,3 +7,6 @@
       @route 'applicationEdit',
         path: 'application/edit/:_id'
         controller: 'RouteControllers.userApplication'
+      @route 'applicationEditSection',
+        path: 'application/edit/:_id/:section'
+        controller: 'RouteControllers.userApplication'

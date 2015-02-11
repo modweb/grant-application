@@ -1,20 +1,20 @@
 <template name='applicationEdit'>
   <div class="row row-offcanvas row-offcanvas-left">
-    <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+    <div class="col-sm-4 col-md-3 sidebar-offcanvas" id="sidebar" role="navigation">
       <div class='sections-title'><h4>Sections</h4></div>
       <ul class="nav nav-sidebar">
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Analytics</a></li>
-        <li><a href="#">Export</a></li>
+        {{#each metaApplication.sections}}
+          <li class='{{#if $eq property sectionProperty}}active{{/if}}'><a href="#" class='section-label'>{{label}}</a></li>
+        {{/each}}
       </ul>
     </div>
 
-    <div class="col-sm-9 col-md-10 main">
+    <div class="col-sm-8 col-md-9 main">
       <div class="visible-xs">
         <button type="button" class="btn btn-primary btn-xs offcanvas-button"><i class="glyphicon glyphicon-chevron-left"></i></button>
       </div>
-      <h1>Edit Application</h1>
+      <h1>{{metaApplication.name}}</h1>
+      {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update'}}
     </div><!--/main-->
   </div><!--/row-->
 </template>

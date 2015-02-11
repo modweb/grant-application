@@ -2,6 +2,14 @@
 
 ## Meta-Application
 
+Sections schema.
+
+    SectionSchema = new SimpleSchema
+      property:
+        type: String
+      label:
+        type: String
+
 Meta-Applications describe information about the application.
 
     MetaApplicationsSchema = new SimpleSchema
@@ -26,7 +34,7 @@ Sections are defined by subschemas. For now, this will not work if these
 properties don't match properties on the application schema.
 
       sections:
-        type: [String]
+        type: [SectionSchema]
         label: 'Sections'
 
     @MetaApplications = new Mongo.Collection 'metaApplications'
@@ -47,6 +55,7 @@ properties don't match properties on the application schema.
         max: 500
         autoform:
           rows: 4
+        optional: yes
       activitiesPast:
         type: String
         label: 'Activities – Past and Future: Provide a sample of your
@@ -60,6 +69,7 @@ properties don't match properties on the application schema.
         max: 2000
         autoform:
           rows: 10
+        optional: yes
       activitiesFuture:
         type: String
         label: 'Provide a sample of your organization’s public programming for
@@ -71,6 +81,7 @@ properties don't match properties on the application schema.
         max: 2000
         autoform:
           rows: 10
+        optional: yes
 
 PUBLIC BENEFIT AND ACCESS
 
@@ -89,6 +100,7 @@ PUBLIC BENEFIT AND ACCESS
         max: 2000
         autoform:
           rows: 10
+        optional: yes
       describeStrategy:
         type: String
         label: 'Describe one strategy your organization implemented last year to
@@ -100,6 +112,7 @@ PUBLIC BENEFIT AND ACCESS
         max: 1000
         autoform:
           rows: 5
+        optional: yes
       storyParternship:
         type: String
         label: 'Tell a story that illustrates one of the most significant,
@@ -110,6 +123,7 @@ PUBLIC BENEFIT AND ACCESS
         max: 1000
         autoform:
           rows: 5
+        optional: yes
       improveCommunity:
         type: String
         label: 'In what ways did your organization improve or benefit the
@@ -121,6 +135,7 @@ PUBLIC BENEFIT AND ACCESS
         max: 1000
         autoform:
           rows: 5
+        optional: yes
 
 ARTISTIC AND CULTURAL VIBRANCY
 
@@ -136,6 +151,7 @@ ARTISTIC AND CULTURAL VIBRANCY
         max: 1000
         autoform:
           rows: 5
+        optional: yes
       creativeRisk:
         type: String
         label: 'Describe one creative risk your organization took in 2014-15.
@@ -144,6 +160,7 @@ ARTISTIC AND CULTURAL VIBRANCY
         max: 1000
         autoform:
           rows: 5
+        optional: yes
       standardsExcellence:
         type: String
         label: 'What standards do you use to measure and evaluate the artistic
@@ -153,6 +170,7 @@ ARTISTIC AND CULTURAL VIBRANCY
         max: 1000
         autoform:
           rows: 5
+        optional: yes
 
 ORGANIZATIONAL CAPACITY
 
@@ -170,6 +188,7 @@ ORGANIZATIONAL CAPACITY
         max: 1500
         autoform:
           rows: 8
+        optional: yes
       fundraisingStrategies:
         type: String
         label: 'Briefly describe your fundraising strategies. In what ways are
@@ -179,6 +198,7 @@ ORGANIZATIONAL CAPACITY
         income? (Up to 1,000 total characters, about 200 words)'
         autoform:
           rows: 5
+        optional: yes
       professionalDevelopment:
         type: String
         label: 'Describe your organization’s commitment to professional
@@ -189,6 +209,7 @@ ORGANIZATIONAL CAPACITY
         200 words)'
         autoform:
           rows: 5
+        optional: yes
       roleVolunteers:
         type: String
         label: 'Explain the role that volunteers (board and non-board) play in
@@ -197,6 +218,7 @@ ORGANIZATIONAL CAPACITY
         total characters, about 150 words)'
         autoform:
           rows: 4
+        optional: yes
       addressChallenges:
         type: String
         label: 'In what ways are you addressing and overcoming challenges with
@@ -205,6 +227,7 @@ ORGANIZATIONAL CAPACITY
         about 150 words)'
         autoform:
           rows: 4
+        optional: yes
 
 
     GoalsSubschema = new SimpleSchema
@@ -214,25 +237,14 @@ ORGANIZATIONAL CAPACITY
         max: 500
         autoform:
           rows: 3
+        optional: yes
       demonstrateProgress:
         type: String
         label: 'In what ways will you measure and demonstrate progress? (Up to
         750 total characters, about 150 words)'
         autoform:
           rows: 4
-
-    OrganizationalGoalsSubschema = new SimpleSchema
-      publicBenefitAndAccess:
-        type: GoalsSubschema
-        label: 'Public Benefit and Access: These goals should be related to your
-        program’s impact in the community and linkage with your mission.'
-      artisticAndCulturalVibrancy:
-        type: GoalsSubschema
-        label: 'Artistic and Cultural Vibrancy: Creating quality, mission-driven work that
-inspires and challenges the community.'
-      organizationalCapacity:
-        type: GoalsSubschema
-        label: 'Organizational Capacity: Managing for today and tomorrow.'
+        optional: yes
 
 ## Application Schemas
 
@@ -254,21 +266,40 @@ inspires and challenges the community.'
         type: PublicBenefitAndAccessSubschema
         label: 'Public Benefit and Access'
         optional: yes
+      publicBenefitAndAccessGoals:
+        type: GoalsSubschema
+        label: 'Public Benefit and Access: These goals should be related to your
+        program’s impact in the community and linkage with your mission.'
+        optional: yes
       artisticAndCulturalVibrancy:
         type: ArtisticAndCulturalVibrancySubschema
         label: 'Artistic snd Cultural Vibrancy'
+        optional: yes
+      artisticAndCulturalVibrancyGoals:
+        type: GoalsSubschema
+        label: 'Artistic and Cultural Vibrancy: Creating quality, mission-driven
+        work that inspires and challenges the community.'
         optional: yes
       organizationalCapacity:
         type: OrganizationalCapacitySubschema
         label: 'Organizational Capacity'
         optional: yes
-      organizationalGoals:
-        type: OrganizationalGoalsSubschema
-        label: 'Organizational Goals'
+      organizationalCapacityGoals:
+        type: GoalsSubschema
+        label: 'Organizational Capacity: Managing for today and tomorrow.'
         optional: yes
 
     @GeneralSupportApplications = new Mongo.Collection 'generalSupportApplications'
     GeneralSupportApplications.attachSchema GeneralSupportApplicationsSchema
+
+## Allow
+
+    GeneralSupportApplications.allow
+
+Can only change your own documents
+
+      update: (userId, doc, fields, modifier) -> userId? and doc.userId is userId
+
 
 ## Applications Meteor Methods
 

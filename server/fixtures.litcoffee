@@ -8,21 +8,43 @@
         shortcode: 'comm-arts-dev'
         deadlineDate: new Date Date.UTC 2015, 5, 25
         sections: [
-          'organizationalIntro'
-          'publicBenefitAndAccess'
-          'artisticAndCulturalVibrancy'
-          'organizationalCapacity'
+          property: 'organizationalIntro'
+          label: 'Organizational Introduction'
+        ,
+          property: 'publicBenefitAndAccess'
+          label: 'Public Benefit and Access'
+        ,
+          property: 'artisticAndCulturalVibrancy'
+          label: 'Artistic and Cultural Vibrancy'
+        ,
+          property: 'organizationalCapacity'
+          label: 'Organizational Capacity'
         ]
       ,
         name: 'General Operating Support Grant Application'
         shortcode: 'gen-op-support'
         deadlineDate: new Date Date.UTC 2015, 6, 30
         sections: [
-          'organizationalIntro'
-          'publicBenefitAndAccess'
-          'artisticAndCulturalVibrancy'
-          'organizationalCapacity'
-          'organizationalGoals'
+          property: 'organizationalIntro'
+          label: 'Organizational Introduction'
+        ,
+          property: 'publicBenefitAndAccess'
+          label: 'Public Benefit and Access'
+        ,
+          property: 'publicBenefitAndAccessGoals'
+          label: 'Public Benefit and Access (Goals)'
+        ,
+          property: 'artisticAndCulturalVibrancy'
+          label: 'Artistic and Cultural Vibrancy'
+        ,
+          property: 'artisticAndCulturalVibrancyGoals'
+          label: 'Artistic and Cultural Vibrancy (Goals)'
+        ,
+          property: 'organizationalCapacity'
+          label: 'Organizational Capacity'
+        ,
+          property: 'organizationalCapacityGoals'
+          label: 'Organizational Capacity (Goals)'
         ]
       ]
 

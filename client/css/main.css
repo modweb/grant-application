@@ -46,3 +46,19 @@ body { padding-top: 50px; }
   padding-right: 20px;
   padding-left: 20px;
 }
+
+.nav-sidebar > .active {
+  background: #CCC;
+}
+
+.nav-sidebar > li > a:hover {
+  background: #DDD;
+}
+
+.nav-sidebar > li > a:active {
+  background: #CCC;
+}
+
+.nav-sidebar > li > a:focus {
+  background: #CCC;
+}

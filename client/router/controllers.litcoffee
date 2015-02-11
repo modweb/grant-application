@@ -18,9 +18,8 @@
             Meteor.subscribe 'metaApplications'
           ]
         data: ->
-          userApplication = GeneralSupportApplications.find().fetch()
-          metaApplications = MetaApplications.find().fetch()
-          metaApplication = _.findWhere metaApplications, _id: userApplication.metaApplicationId
+          userApplication = GeneralSupportApplications.findOne()
+          metaApplication = MetaApplications.findOne userApplication?.metaApplicationId
           data =
             userApplication: userApplication
             metaApplication: metaApplication
