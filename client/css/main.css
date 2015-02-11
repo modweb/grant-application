@@ -32,12 +32,15 @@ body { padding-top: 50px; }
   }
 }
 
-
+.sections-title {
+  padding-top: 20px;
+}
 /* sidebar navigation */
 .nav-sidebar {
   margin-right: -30px;
   margin-bottom: 20px;
   margin-left: -15px;
+  margin-top: 15px;
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
