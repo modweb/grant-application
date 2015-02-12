@@ -6,6 +6,8 @@
     Template.applicationEdit.events
       'click .section-label': (event) ->
         Session.set 'section', this
+      'click .sections-title': (event) ->
+        Session.set 'section', null
 
     Template.applicationEdit.rendered = ->
 

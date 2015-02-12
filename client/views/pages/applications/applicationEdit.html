@@ -14,7 +14,12 @@
         <button type="button" class="btn btn-primary btn-xs offcanvas-button"><i class="glyphicon glyphicon-chevron-left"></i></button>
       </div>
       <h1>{{metaApplication.name}}</h1>
-      {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update'}}
+      {{#if sectionProperty}}
+        {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent=false trimStrings=false}}
+      {{else}}
+        <p>Select a section on the left (use the menu button above if it's not visible)</p>
+        <p>The application will save your input automatically.</p>
+      {{/if}}
     </div><!--/main-->
   </div><!--/row-->
 </template>
