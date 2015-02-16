@@ -1,0 +1,293 @@
+/**********************************
+GENERAL
+***********************************/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #999;
+}
+
+#wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 92%;
+}
+
+h3 {
+  margin: 0 0 1em 0;
+}
+
+
+
+/**********************************
+HEADING
+***********************************/
+
+header {
+  float: left;
+  margin: 0 0 30px 0;
+  width: 100%;
+
+}
+
+.logo-area {
+  background: url("../img/header-BG.png") #443d3e;
+  border-bottom: .3em solid #292526;
+  padding-bottom: 1.25em;
+}
+
+img.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:1.5em;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  margin: 15px 0;
+  font-size: 1.75em;
+  font-weight: normal;
+  line-height: 0.8em;
+  color: #fff;
+}
+
+h2 {
+  font-size: 0.75em;
+  margin: -5px 0 0;
+  font-weight: normal;
+  color: #fff;
+}
+
+
+
+/**********************************
+NAVIGATION
+***********************************/
+
+nav {
+  text-align: center;
+  padding: 20px 0 0;
+  margin: 0;
+  background: url("../img/menu-BG.png") #0d76ba;
+  border-top: 1px solid #409bd2;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: -1px;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+  padding: 21px 10px 18px 10px;
+}
+
+nav a.selected, nav a:hover {
+  background: url('../img/bg_active_menu.png') repeat-x 0 0;
+}
+
+nav .nav-inner {
+  background: url('../img/bg_mainmenu_inner.png') repeat-x 0 0;
+  height: 50px;
+  margin-top: -43px;
+}
+
+.nav-bottom {
+  background: url('../img/bg_mainmenu.png') repeat-x 0 100%;
+  padding-bottom: 25px;
+  margin-top: -15px;
+}
+
+
+/**********************************
+FOOTER
+***********************************/
+
+footer {
+  font-size: 0.75em;
+  color: #919191;
+  text-align: center;
+  clear: both;
+  padding: 20px 15px;
+  background: url('../img/footer-BG.png') #919191;
+}
+
+footer a {
+  color: #919191;
+  -webkit-transition: all 200ms ease-in-out;
+}
+
+footer a:hover {
+  color: #c62b02;
+  -webkit-transition: all 200ms ease-in-out;
+}
+
+h4 {
+  color: #545454;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: -1px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer-elements {
+  text-align: left;
+  margin: 0 auto;
+  width: 960px;
+}
+
+#contact, #social, #support, #tweets {
+  width: 208px;
+  margin: 0 16px 0 16px;
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+.simple-button-link {
+  background: #d3262d;
+  padding: 3px 9px 4px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 10px 7px 7px 0;
+}
+
+.simple-button-link:hover {
+  background: #000;
+  color: #fff;
+}
+
+#social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#social ul li {
+  margin-bottom: 9px;
+}
+
+#social a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 0 1px 35px;
+  background: url('../img/sprite_social.png') no-repeat 0 0;
+  min-height: 19px;
+}
+
+#social a.twitter {
+  background-position: 0 0px;
+}
+
+#social a.facebook {
+  background-position: 0 -20px;
+}
+
+#social a.googleplus {
+  background-position: 0 -40px;
+}
+
+#social a.email {
+  background-position: 0 -80px;
+}
+
+#social a.youtube {
+  background-position: 0 -180px;
+}
+
+#social a.instagram {
+  background-position: 0 -141px;
+}
+
+#social a.linkedin {
+  background-position: 0 -160px;
+}
+
+.copyright {
+  padding: 22px 10px 0;
+  min-height: 15px;
+  margin: 0 auto;
+  display: inline-flex;
+}
+
+@media (min-width: 1500px) {
+.copyright {
+  margin-top: 320px;
+  display: block;
+ }
+}
+
+@media (max-width: 980px) and (min-width: 600px) {
+  .footer-elements{
+    width: 540px;
+    padding-left: 10%;
+  }
+
+  #social, #tweets {
+  padding-bottom: 25px;
+ }
+
+  #contact, #support {
+  padding-bottom: 25px;
+  padding-right: 50px;
+ }
+
+ .copyright {
+  margin-top: -28px;
+ }
+}
+
+@media (max-width: 600px) {
+  .footer-elements{
+    width: 300px;
+    padding-left: 18%;
+  }
+
+  #contact, #social, #support, #tweets {
+  padding-bottom: 35px;
+ }
+
+ .copyright {
+  margin-top: -18px;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
