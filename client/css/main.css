@@ -1,6 +1,3 @@
-body { padding-top: 50px; }
-
-
 /*
  * off canvas
  * --------------------------------------------
@@ -25,9 +22,9 @@ body { padding-top: 50px; }
 
   .sidebar-offcanvas {
     position: absolute;
-    top: 0;
+    top: 244px;
     width: 33%;
-    margin-left: 0px;
+    margin-left: 10px;
     overflow: hidden;
   }
 }
