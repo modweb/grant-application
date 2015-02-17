@@ -7,6 +7,11 @@
           <li class='{{#if $eq property sectionProperty}}active{{/if}}'><a href="#" class='section-label'>{{label}}</a></li>
         {{/each}}
       </ul>
+      {{#with doc}}
+        {{> buttonPreview}}
+        {{> buttonPrint}}
+        {{> buttonSubmit}}
+      {{/with}}
     </div>
 
     <div class="col-sm-8 col-md-9 main">

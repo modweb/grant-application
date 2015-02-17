@@ -273,7 +273,7 @@ ORGANIZATIONAL CAPACITY
         optional: yes
       artisticAndCulturalVibrancy:
         type: ArtisticAndCulturalVibrancySubschema
-        label: 'Artistic snd Cultural Vibrancy'
+        label: 'Artistic and Cultural Vibrancy'
         optional: yes
       artisticAndCulturalVibrancyGoals:
         type: GoalsSubschema

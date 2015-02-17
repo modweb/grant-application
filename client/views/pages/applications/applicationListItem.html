@@ -4,8 +4,11 @@
     Deadline <b>{{> dateUTC value=deadlineDate}}</b><br>
     {{#if userApplication}}
       <a href="{{pathFor route='applicationEdit' data=userApplication}}"><button class='btn btn-info'>Open</button></a>
-      <button class='btn btn-warning'>Preview</button>
-      <button class='btn btn-success'>Submit</button>
+      {{#with userApplication}}
+        {{> buttonPreview}}
+        {{> buttonPrint}}
+        {{> buttonSubmit}}
+      {{/with}}
     {{else}}
       <button class='btn btn-primary create-application'>Create</button>
     {{/if}}
