@@ -44,6 +44,8 @@ the key we're iterating on is a section of the form, which would have a type of
           invalidSection = no
           if (keyParts.length > 1) and not _.contains sections, (_.first keyParts)
             invalidSection = yes
+          if _s.contains key, '$'
+            invalidSection = yes
 
 Check if key is in a valid section or if it is a section (i.e. object)
 
@@ -58,3 +60,6 @@ I.e. for the key `_id`.
             label: label
             value: value
             key: key
+
+        console.log keyValues
+        keyValues

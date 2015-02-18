@@ -288,6 +288,16 @@ ORGANIZATIONAL CAPACITY
         type: GoalsSubschema
         label: 'Organizational Capacity: Managing for today and tomorrow.'
         optional: yes
+      attachments:
+        type: [String]
+        label: 'Upload Attachments (max 16MB)'
+        optional: yes
+        maxCount: 5
+      'attachments.$':
+        autoform:
+          afFieldInput:
+            type: 'fileUpload'
+            collection: 'Attachments'
 
     @GeneralSupportApplications = new Mongo.Collection 'generalSupportApplications'
     GeneralSupportApplications.attachSchema GeneralSupportApplicationsSchema

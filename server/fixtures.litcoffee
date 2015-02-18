@@ -19,6 +19,9 @@
         ,
           property: 'organizationalCapacity'
           label: 'Organizational Capacity'
+        ,
+          property: 'attachments'
+          label: 'Attachments'
         ]
       ,
         name: 'General Operating Support Grant Application'
@@ -45,6 +48,9 @@
         ,
           property: 'organizationalCapacityGoals'
           label: 'Organizational Capacity (Goals)'
+        ,
+          property: 'attachments'
+          label: 'Attachments'
         ]
       ]
 

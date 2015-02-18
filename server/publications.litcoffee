@@ -8,3 +8,5 @@
 
     Meteor.publish 'metaApplications', ->
       MetaApplications.find()
+
+    Meteor.publish 'attachment', -> Attachments.find()

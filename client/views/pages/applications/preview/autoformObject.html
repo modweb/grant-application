@@ -1,15 +1,5 @@
 <template name='autoformObject'>
-  {{something}}
   {{#each schemaProperties}}
-    {{#if label}}
-      <b>{{label}}</b>
-      <p>
-        {{#if value}}
-          {{value}}
-        {{else}}
-          <span class='label label-danger'>BLANK</span>
-        {{/if}}
-      </p>
-    {{/if}}
+    {{> autoformObjectProperty}}
   {{/each}}
 </template>

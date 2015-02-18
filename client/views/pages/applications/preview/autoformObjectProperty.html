@@ -1,0 +1,18 @@
+<template name='autoformObjectProperty'>
+  {{#if label}}
+    <b>{{label}}</b>
+    <p>
+      {{#if value}}
+        {{#if fileUpload}}
+          {{#each uploadIds}}
+            {{> uploadPreview}}<br>
+          {{/each}}
+        {{else}}
+          {{value}}
+        {{/if}}
+      {{else}}
+        <span class='label label-danger'>BLANK</span>
+      {{/if}}
+    </p>
+  {{/if}}
+</template>
