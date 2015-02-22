@@ -59,3 +59,11 @@
 .nav-sidebar > li > a:focus {
   background: #CCC;
 }
+
+.form-control {
+  padding-right: 0px;
+}
+
+.at-form {
+  overflow: unset;
+}

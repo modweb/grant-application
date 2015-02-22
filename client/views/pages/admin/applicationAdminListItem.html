@@ -1,0 +1,10 @@
+<template name='applicationAdminListItem'>
+  <div class='jumbotron'>
+    <span class='h4'>{{metaApplication.name}} - </span>
+    {{#with userApplication}}
+      {{userEmail}}<br>
+      {{> buttonPreview}}
+      {{> buttonPrint}}
+    {{/with}}
+  </div>
+</template>

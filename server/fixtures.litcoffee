@@ -74,7 +74,7 @@
 
     if Meteor.users.find(superadmin).count() is 0
       id = createUser superadmin
-      Roles.addUsersToRoles id, ['superadmin', admin]
+      Roles.addUsersToRoles id, ['superadmin', 'admin']
       console.log 'created fixture user `superadmin`'
     if Meteor.users.find(admin).count() is 0
       id = createUser admin

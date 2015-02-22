@@ -10,3 +10,5 @@
       MetaApplications.find()
 
     Meteor.publish 'attachment', -> Attachments.find()
+
+    Meteor.publish 'allUserApplications', -> GeneralSupportApplications.find()

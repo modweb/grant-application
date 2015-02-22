@@ -24,3 +24,15 @@
           data =
             userApplication: userApplication
             metaApplication: metaApplication
+      admin: RouteController.extend
+        waitOn: ->
+          [
+            Meteor.subscribe 'allUserApplications'
+            Meteor.subscribe 'metaApplications'
+          ]
+        data: ->
+          userApplications = GeneralSupportApplications.find()
+          metaApplications = MetaApplications.find()
+          data =
+            userApplications: userApplications
+            metaApplications: metaApplications

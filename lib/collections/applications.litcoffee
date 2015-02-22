@@ -258,6 +258,13 @@ ORGANIZATIONAL CAPACITY
             return Meteor.userId()
           else
             this.unset()
+      userEmail:
+        type: String
+        autoValue: ->
+          if this.isInsert
+            return Meteor.user().emails[0]?.address
+          else
+            this.unset()
       organizationalIntro:
         type: OrganizationalIntroSubschema
         label: 'Organizational Introduction'
