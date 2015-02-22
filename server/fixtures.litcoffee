@@ -60,3 +60,23 @@
         countInserted += 1
 
       console.log "MetaApplication fixtures created (#{countInserted})"
+
+## Users
+
+    createUser = (userData) ->
+      id = Accounts.createUser
+        username: userData.username
+        email: userData.username
+        password: 'asdfasdf'
+
+    superadmin = username: 'superadmin'
+    admin = username: 'admin'
+
+    if Meteor.users.find(superadmin).count() is 0
+      id = createUser superadmin
+      Roles.addUsersToRoles id, ['superadmin', admin]
+      console.log 'created fixture user `superadmin`'
+    if Meteor.users.find(admin).count() is 0
+      id = createUser admin
+      Roles.addUsersToRoles id, ['admin']
+      console.log 'created fixture user `admin`'
