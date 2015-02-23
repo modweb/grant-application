@@ -273,6 +273,9 @@ ORGANIZATIONAL CAPACITY
       timeSubmitted:
         type: Date
         optional: yes
+      timeModified:
+        type: Date
+        autoValue: -> new Date()
       organizationalIntro:
         type: OrganizationalIntroSubschema
         label: 'Organizational Introduction'

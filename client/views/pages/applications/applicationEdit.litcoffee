@@ -2,6 +2,8 @@
       sectionProperty: ->
         (Session.get 'section')?.property
       doc: -> this.userApplication
+      localTimeModified: ->
+        moment(this.userApplication.timeModified).format 'dddd, MMMM Do YYYY, h:mm:ss a'
 
     Template.applicationEdit.events
       'click .section-label': (event) ->

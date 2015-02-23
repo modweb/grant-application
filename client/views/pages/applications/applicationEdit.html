@@ -25,6 +25,7 @@
       </div>
       <h1>{{metaApplication.name}}</h1>
       {{#if sectionProperty}}
+        Last saved: {{localTimeModified}}
         {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent='Save Changes' trimStrings=false}}
       {{else}}
         <p>Select a section on the left (use the menu button above if it's not visible)</p>
