@@ -272,6 +272,7 @@ ORGANIZATIONAL CAPACITY
             return no
       timeSubmitted:
         type: Date
+        optional: yes
       organizationalIntro:
         type: OrganizationalIntroSubschema
         label: 'Organizational Introduction'

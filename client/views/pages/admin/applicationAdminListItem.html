@@ -5,6 +5,11 @@
       {{userEmail}}<br>
       {{> buttonPreview}}
       {{> buttonPrint}}
+      {{#if submitted}}
+        <h3>Application Submitted at {{timeSubmitted}}</h3><br>
+      {{else}}
+        <h3>Not Submitted</h3>
+      {{/if}}
     {{/with}}
   </div>
 </template>

@@ -10,7 +10,12 @@
       {{#with doc}}
         {{> buttonPreview}}
         {{> buttonPrint}}
-        {{> buttonSubmit}}
+        {{#if submitted}}
+          <h3>Application Submitted at {{timeSubmitted}}</h3><br>
+          <div class="alert alert-danger" role="alert">This applicaiton has been submitted and is no longer editable.</div>
+        {{else}}
+          {{> buttonSubmit}}
+        {{/if}}
       {{/with}}
     </div>
 

@@ -7,7 +7,11 @@
       {{#with userApplication}}
         {{> buttonPreview}}
         {{> buttonPrint}}
-        {{> buttonSubmit}}
+        {{#if submitted}}
+          <h3>Application Submitted at {{timeSubmitted}}</h3>
+        {{else}}
+          {{> buttonSubmit}}
+        {{/if}}
       {{/with}}
     {{else}}
       <button class='btn btn-primary create-application'>Create</button>
