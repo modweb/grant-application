@@ -67,3 +67,8 @@
 .at-form {
   overflow: unset;
 }
+
+/* we don't want default styling on accounts-template buttons */
+#at-btn {
+  background-color: #4285F4
+}
