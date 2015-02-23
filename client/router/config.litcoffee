@@ -10,6 +10,9 @@
       isLoggedIn: ->
         Router.go 'atSignIn' unless Meteor.loggingIn() or Meteor.user()
         this.next()
+      isAdmin: ->
+        Roles.userIsInRole Meteor.userId(), ['admin','superadmin']
+        this.next()
 
 Login filter, except public routes
 
@@ -25,3 +28,8 @@ Login filter, except public routes
         'atEnrollAccount'
         'atChangePwd'
       ]
+
+Admin filter
+
+    Router.onBeforeAction filters.isAdmin,
+      only: ['admin']
