@@ -22,3 +22,4 @@ cfs:standard-packages
 cfs:gridfs
 yogiben:autoform-file
 alanning:roles
+email

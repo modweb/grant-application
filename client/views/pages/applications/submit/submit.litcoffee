@@ -1,4 +1,6 @@
     Template.submit.events
       'click .submit-application': (event) ->
         console.log 'submit app!'
-        Meteor.call 'submitApplication', this._id
+        renderedApplication = Blaze.toHTMLWithData Template.preview, this
+        console.log renderedApplication
+        Meteor.call 'submitApplication', this.userApplication._id, renderedApplication

@@ -366,12 +366,14 @@ Create the application
 
 ### Submit Application
 
-      submitApplication: (id) ->
+      submitApplication: (id, renderedApplication) ->
 
 lookup application
 
         application = GeneralSupportApplications.findOne id
         throw new Meteor.Error 'not-found', 'could not find application with id' if not application
+
+        throw new Meteor.Error 'resubmission', 'can not resubmit application' if application.submitted
 
 check that the user is authorized
 
@@ -387,6 +389,25 @@ Submit the application
 
         GeneralSupportApplications.update criteria, modifier
 
+Bail on the client (i.e. don't try to send email on the client)
+
+        return if Meteor.isClient
+
+Send email to user and Culture Works designated admin
+
+        userEmail = Meteor.user().emails[0].address
+        applicationPrintLink = Meteor.absoluteUrl "application/print/#{application._id}"
+        applicationPreviewLink = Meteor.absoluteUrl "application/preview/#{application._id}"
+        html = "<h1>Application submission successful.</h1><p>#{userEmail} succesfully submitted a grant application.<br><a href='#{applicationPreviewLink}'>View Application</a> <a href='#{applicationPrintLink}'>Print Application</a><hr>"
+        html += renderedApplication
+        email =
+          to: userEmail
+          from: 'support@creativefuse.org'
+          bcc: 'support@creativefuse.org'
+          subject: "Culture Works Application submission successful (#{application._id})"
+          html: html
+
+        Email.send email
 
 ### Remove all applications (superadmin only)
 
