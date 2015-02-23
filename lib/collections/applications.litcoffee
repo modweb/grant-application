@@ -265,6 +265,13 @@ ORGANIZATIONAL CAPACITY
             return Meteor.user().emails[0]?.address
           else
             this.unset()
+      submitted:
+        type: Boolean
+        autoValue: ->
+          if this.isInsert
+            return no
+      timeSubmitted:
+        type: Date
       organizationalIntro:
         type: OrganizationalIntroSubschema
         label: 'Organizational Introduction'
@@ -315,7 +322,7 @@ ORGANIZATIONAL CAPACITY
 
 Can only change your own documents
 
-      update: (userId, doc, fields, modifier) -> userId? and doc.userId is userId
+      update: (userId, doc, fields, modifier) -> userId? and (doc.userId is userId) and not doc.submitted
       remove: (userId, doc) -> userId? and Roles.userIsInRole userId, ['superadmin']
 
 
@@ -353,7 +360,31 @@ Create the application
 
         GeneralSupportApplications.insert application
 
-### Remove all applications
+### Submit Application
+
+      submitApplication: (id) ->
+
+lookup application
+
+        application = GeneralSupportApplications.findOne id
+        throw new Meteor.Error 'not-found', 'could not find application with id' if not application
+
+check that the user is authorized
+
+        throw new Meteor.Error 'not-authorized', 'only owner can submit the application' if application.userId isnt Meteor.userId()
+
+Submit the application
+
+        criteria = _id: id
+        modifier =
+          $set:
+            submitted: yes
+            timeSubmitted: new Date()
+
+        GeneralSupportApplications.update criteria, modifier
+
+
+### Remove all applications (superadmin only)
 
       deleteAllApplications: () ->
         if Roles.userIsInRole Meteor.userId(), ['superadmin']

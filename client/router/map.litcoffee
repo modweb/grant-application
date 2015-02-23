@@ -30,6 +30,9 @@ https://github.com/alanning/meteor-roles/issues/61 is fixed.
       layoutTemplate: 'printLayout'
       path: 'application/print/:_id'
       controller: 'RouteControllers.userApplication'
+    Router.route 'submit',
+      path: 'applicaiton/submit/:_id'
+      controller: 'RouteControllers.userApplication'
 
 Admin routes
 

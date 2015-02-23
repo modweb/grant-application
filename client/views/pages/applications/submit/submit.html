@@ -1,0 +1,14 @@
+<template name='submit'>
+  <h3>Submit Application - {{metaApplication.name}}</h3>
+  {{#if userApplication.submitted}}
+    <p>This applicaiton was submitted at {{userApplication.timeSubmitted}}</p>
+  {{else}}
+    <p>Are you sure you want to submit this application? Please preview your
+  applicaiton before submitting. After your application has been submitted you
+  cannot make changes.</p>
+    {{#with userApplication}}
+      {{> buttonPreview}}
+      <button class='btn btn-success submit-application'>I'm sure, submit application</button>
+    {{/with}}
+  {{/if}}
+</template>
