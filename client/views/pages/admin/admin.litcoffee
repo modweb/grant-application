@@ -7,3 +7,8 @@
             metaApplication: metaApplication
             userApplication: userApplication
         _.sortBy applications, (application) -> application.metaApplication.name
+
+    Template.admin.events
+      'click .delete-all-apps': (event) ->
+        console.log 'delete all apps!'
+        Meteor.call 'deleteAllApplications'

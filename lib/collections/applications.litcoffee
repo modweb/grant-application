@@ -316,13 +316,14 @@ ORGANIZATIONAL CAPACITY
 Can only change your own documents
 
       update: (userId, doc, fields, modifier) -> userId? and doc.userId is userId
+      remove: (userId, doc) -> userId? and Roles.userIsInRole userId, ['superadmin']
 
 
 ## Applications Meteor Methods
 
     Meteor.methods
 
-Create a new application
+### Create a new application
 
       createApplication: (shortcode) ->
 
@@ -351,3 +352,15 @@ Create the application
           metaApplicationId: metaApplication._id
 
         GeneralSupportApplications.insert application
+
+### Remove all applications
+
+      deleteAllApplications: () ->
+        if Roles.userIsInRole Meteor.userId(), ['superadmin']
+          console.log 'deleting all apps...'
+          GeneralSupportApplications.remove {}
+          Attachments.remove {}
+          console.log 'successfully deleted all apps.'
+        else
+          throw new Meteor.Error 'access-denied', 'you must be a superadmin to
+          remove all applications.'

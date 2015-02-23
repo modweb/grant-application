@@ -20,7 +20,7 @@
       </div>
       <h1>{{metaApplication.name}}</h1>
       {{#if sectionProperty}}
-        {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent='Update' trimStrings=false}}
+        {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent='Save Changes' trimStrings=false}}
       {{else}}
         <p>Select a section on the left (use the menu button above if it's not visible)</p>
         <p>The application will save your input automatically.</p>
