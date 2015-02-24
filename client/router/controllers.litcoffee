@@ -16,7 +16,6 @@
           [
             Meteor.subscribe 'userApplication', this.params._id
             Meteor.subscribe 'metaApplications'
-            Meteor.subscribe 'attachment', this.params._id
           ]
         data: ->
           userApplication = GeneralSupportApplications.findOne()
