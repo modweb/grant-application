@@ -15,7 +15,12 @@
     Meteor.publish 'metaApplications', ->
       MetaApplications.find()
 
-    Meteor.publish 'attachment', -> Attachments.find()
+    Meteor.publish 'attachment', (userAppliationId) ->
+      application = GeneralSupportApplications.findOne userAppliationId
+      if not application?.attachments?
+        Attachments.find no
+      else
+        Attachments.find _id: $in: application?.attachments if application?.attachments?.length > 0
 
     Meteor.publish 'allUserApplications', ->
       if Roles.userIsInRole this.userId, ['admin','superadmin']
