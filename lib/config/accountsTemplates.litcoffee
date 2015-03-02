@@ -22,7 +22,7 @@
       privacyUrl: 'privacy'
       termsUrl: 'terms-of-use'
 
-      homeRoutePath: '/'
+      homeRoutePath: '/myApplications'
       redirectTimeout: 4000
 
       texts:
@@ -35,11 +35,17 @@
 
 ## Routes
 
+    redirect =
+      redirect: ->
+        if Roles.userIsInRole Meteor.userId(), ['admin', 'superadmin']
+          Router.go 'admin'
+        else
+          Router.go 'myApplications'
     AccountsTemplates.configureRoute 'changePwd'
-    AccountsTemplates.configureRoute 'enrollAccount'
+    AccountsTemplates.configureRoute 'enrollAccount', redirect
     AccountsTemplates.configureRoute 'forgotPwd'
     AccountsTemplates.configureRoute 'resetPwd'
-    AccountsTemplates.configureRoute 'signIn'
-    AccountsTemplates.configureRoute 'signUp'
+    AccountsTemplates.configureRoute 'signIn', redirect
+    AccountsTemplates.configureRoute 'signUp', redirect
     AccountsTemplates.configureRoute 'verifyEmail'
     AccountsTemplates.configureRoute 'ensureSignedIn'
