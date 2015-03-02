@@ -14,7 +14,8 @@
         GeneralSupportApplications.find criteria
       children: [
         find: (userApplication) ->
-          applicationIds = userApplication.attachments or []
+          applicationIds = [].concat userApplication.annualBudgetAttachment, userApplication.fundersReportAttachment, userApplication.financialStatementsAttachment, userApplication.memorandumUnderstandingAttachment
+          applicationIds = _.without applicationIds, undefined
           Attachments.find _id: $in: applicationIds
       ]
 

@@ -27,7 +27,7 @@
       {{#if sectionProperty}}
         Last saved: {{localTimeModified}}<br><br>
         {{#if sectionDescription}}
-          {{sectionDescription}}<br>
+          {{{sectionDescription}}}<br>
         {{/if}}
         {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent='Save Changes' trimStrings=false }}
       {{else}}

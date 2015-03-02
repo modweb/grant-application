@@ -438,6 +438,19 @@ ORGANIZATIONAL CAPACITY
           rows: 4
         optional: yes
 
+Attachments
+
+    AttachmentsSubschema = new SimpleSchema
+      excelFinancials:
+        type: String
+        label: 'Please provide information regarding your organization’s current annual budget:
+          1) Total amount budgeted for the current fiscal year; 2) Actual figures as on March 31, 2015; 3) Projections for the end of the fiscal year
+        Click here to download the excel financial budget form. When you have
+        completed it, save and upload below.(max 16MB)'
+        autoform:
+          afFieldInput:
+            type: 'fileUpload'
+            collection: 'Attachments'
 ## Application Schemas
 
     @GeneralSupportApplicationsSchema = new SimpleSchema
@@ -506,16 +519,41 @@ ORGANIZATIONAL CAPACITY
         type: GoalsSubschema
         label: 'Organizational Capacity: Managing for today and tomorrow.'
         optional: yes
-      attachments:
-        type: [String]
-        label: 'Upload Attachments (max 16MB)'
+      annualBudgetAttachment:
+        type: String
         optional: yes
-        maxCount: 5
-      'attachments.$':
+        label: 'Upload Annual Budget'
         autoform:
           afFieldInput:
             type: 'fileUpload'
             collection: 'Attachments'
+      fundersReportAttachment:
+        type: String
+        optional: yes
+        label: "Upload Funder's Report"
+        autoform:
+          afFieldInput:
+            type: 'fileUpload'
+            collection: 'Attachments'
+      financialStatementsAttachment:
+        type: [String]
+        optional: yes
+        label: 'Upload Financial documents (max 16MB each)'
+        maxCount: 5
+      'financialStatementsAttachment.$':
+        autoform:
+          afFieldInput:
+            type: 'fileUpload'
+            collection: 'Attachments'
+      memorandumUnderstandingAttachment:
+        type: String
+        optional: yes
+        label: 'Upload Memorandum of Understanding'
+        autoform:
+          afFieldInput:
+            type: 'fileUpload'
+            collection: 'Attachments'
+
 
     @GeneralSupportApplications = new Mongo.Collection 'generalSupportApplications'
     GeneralSupportApplications.attachSchema GeneralSupportApplicationsSchema

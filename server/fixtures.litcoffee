@@ -31,8 +31,40 @@
           property: 'organizationalCapacity'
           label: 'Organizational Capacity'
         ,
-          property: 'attachments'
-          label: 'Attachments'
+          property: 'annualBudgetAttachment'
+          label: 'Annual Budget Information'
+          description: "Please provide information regarding your organization’s current annual budget:
+            <ul>
+              <li>Total amount budgeted for the current fiscal year</li>
+              <li>Actual figures as on March 31, 2015</li>
+              <li>Projections for the end of the fiscal year</li>
+              <li><a href='http://cultureworks.org/wp-content/uploads/2015/03/Organizational-Budget-Information-Spreadsheet.xlsx' target='_blank'>Click here</a> to download the excel financial budget form. When you have
+          completed it, save and upload below.(max 16MB)</li>
+            <ul>"
+        ,
+          property: 'fundersReportAttachment'
+          label: "Funder's report from the Ohio Cultural Data Project"
+          description: "Applicants are required to have a completed Cultural
+          Data Project Profile for the most recently completed fiscal year that
+          is “Review Complete.” (Go to <a href='http://www.ohculturaldata.org' target='_blank'>www.ohculturaldata.org</a>
+          and log on. Click on Funder’s Reports. Find Culture Works and click
+          the .pdf link. Save the file and upload below."
+        ,
+          property: 'financialStatementsAttachment'
+          label: 'Financial Statements'
+          description: 'Community Arts Development applicants are required to
+          submit either Audited Financial Statements with an Auditor’s
+          Management Letter, or Financial Statements that have been reviewed by
+          a CPA. Please scan these documents and upload here. (limit 5 documents)'
+        ,
+          property: 'memorandumUnderstandingAttachment'
+          label: "Memorandum of Understanding"
+          description: "Applicants must submit a Memorandum of Understanding
+          signed by both the Executive Director/CEO and the Board Chair.
+          <a href='http://cultureworks.org/wp-content/uploads/2015/03/MEMORANDUM-OF-UNDERSTANDING.pdf' target='_blank'>Click here</a>
+          to download a .pdf of this agreement to sign. Once signed, scan and
+          upload below."
+
         ]
       ,
         name: 'General Operating Support Grant Application'
