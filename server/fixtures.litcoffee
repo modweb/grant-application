@@ -88,7 +88,7 @@
           label: 'Organizational Capacity'
         ,
           property: 'organizationalGoals'
-          label: 'Organizational Goals'
+          label: 'Organizational Goals for 2015-2016'
           description: 'LOOKING FORWARD: 2015-2016 ORGANIZATIONAL GOALS Note:
           You will be asked to track and share your progress on each of these
           questions in your 2015-16 year-end report. Identify your institutional
