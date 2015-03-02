@@ -6,7 +6,7 @@
       metaApplications = [
         name: 'Community Arts Development Grant Application'
         shortcode: 'comm-arts-dev'
-        deadlineDate: new Date Date.UTC 2015, 5, 25
+        deadlineDate: new Date Date.UTC 2015, 3, 23
         sections: [
           property: 'generalInfo'
           label: 'General Information'
@@ -69,7 +69,7 @@
       ,
         name: 'General Operating Support Grant Application'
         shortcode: 'gen-op-support'
-        deadlineDate: new Date Date.UTC 2015, 6, 30
+        deadlineDate: new Date Date.UTC 2015, 3, 23
         sections: [
           property: 'generalInfo'
           label: 'General Information'
