@@ -9,6 +9,12 @@ Sections schema.
         type: String
       label:
         type: String
+      description:
+        type: String
+        optional: yes
+      template:
+        type: String
+        optional: yes
 
 Meta-Applications describe information about the application.
 
@@ -40,7 +46,193 @@ properties don't match properties on the application schema.
     @MetaApplications = new Mongo.Collection 'metaApplications'
     MetaApplications.attachSchema MetaApplicationsSchema
 
+### Organizational info subschemas
+
 ## Application Subschemas
+
+NOTE: nested forms is not supported by autoforms, yet. Use these as nested forms
+if/when they're supported.
+
+    AttendanceSubschema = new SimpleSchema
+      totalPaidAttendance:
+        type: Number
+        label: 'Total Paid Attendance'
+        optional: yes
+      totalFreeAttendance:
+        type: Number
+        label: 'Total Free Attendance'
+        optional: yes
+      totalAttendance:
+        type: Number
+        label: 'Total Attendance'
+        optional: yes
+      childrenUnder18Paid:
+        type: Number
+        label: 'Children 18 and Under Paid Attendance'
+        optional: yes
+      childrenUnder18Free:
+        type: Number
+        label: 'Children 18 and Under Free Attendance'
+        optional: yes
+      totalChildrenServed:
+        type: Number
+        label: 'TOTAL CHILDREN SERVED 18 AND UNDER'
+        optional: yes
+
+    StaffSubschema = new SimpleSchema
+      fulltimeEmployees:
+        type: Number
+        label: 'Full-Time Regular Employees'
+        optional: yes
+      parttimeEmployees:
+        type: Number
+        label: 'Part-Time Regular Employees'
+        optional: yes
+      independentContractors:
+        type: Number
+        label: 'Independent Contractors'
+        optional: yes
+      internsApprentices:
+        type: Number
+        label: 'Interns/Apprentices'
+        optional: yes
+      volunteers:
+        type: Number
+        label: 'Volunteers'
+        optional: yes
+
+    BoardSubschema = new SimpleSchema
+      boardMembers:
+        type: Number
+        label: 'Number of Board Members'
+        optional: yes
+      boardWithAnnualGift:
+        type: Number
+        label: 'Number of Board Members Making an Annual Financial Gift to your Organization'
+        optional: yes
+
+    ParticipationSubschema = new SimpleSchema
+      totalPaidAttendance:
+        type: Number
+        label: 'Total Paid Attendance'
+        optional: yes
+      totalFreeAttendance:
+        type: Number
+        label: 'Total Free Attendance'
+        optional: yes
+      totalAttendance:
+        type: Number
+        label: 'Total Attendance'
+        optional: yes
+      childrenUnder18Paid:
+        type: Number
+        label: 'Children 18 and Under Paid Attendance'
+        optional: yes
+      childrenUnder18Free:
+        type: Number
+        label: 'Children 18 and Under Free Attendance'
+        optional: yes
+      totalChildrenServed:
+        type: Number
+        label: 'TOTAL CHILDREN SERVED 18 AND UNDER'
+        optional: yes
+      fulltimeEmployees:
+        type: Number
+        label: 'Full-Time Regular Employees'
+        optional: yes
+      parttimeEmployees:
+        type: Number
+        label: 'Part-Time Regular Employees'
+        optional: yes
+      independentContractors:
+        type: Number
+        label: 'Independent Contractors'
+        optional: yes
+      internsApprentices:
+        type: Number
+        label: 'Interns/Apprentices'
+        optional: yes
+      volunteers:
+        type: Number
+        label: 'Volunteers'
+        optional: yes
+      boardMembers:
+        type: Number
+        label: 'Number of Board Members'
+        optional: yes
+      boardWithAnnualGift:
+        type: Number
+        label: 'Number of Board Members Making an Annual Financial Gift to your Organization'
+        optional: yes
+
+GENERAL INFORMATION
+
+    GeneralInfoSubschema = new SimpleSchema
+      oranizationName:
+        type: String
+        label: 'Organization Name'
+        optional: yes
+      federalTaxId:
+        type: String
+        label: 'Federal Tax ID#'
+        optional: yes
+      address:
+        type: String
+        label: 'Address'
+        optional: yes
+      cityStateZip:
+        type: String
+        label: 'City/State/Zip'
+        optional: yes
+      organizationPhoneNumber:
+        type: String
+        label: 'Organization Telephone Number'
+        optional: yes
+      websiteAddress:
+        type: String
+        label: 'Website Address'
+        optional: yes
+      currentAnnualBudget:
+        type: String
+        label: "Organization's Current Annual Budget"
+        optional: yes
+      directorCEOEmail:
+        type: String
+        label: 'Executive Director/CEO E-mail Address'
+        optional: yes
+      nameTitleContact:
+        type: String
+        label: 'Name and Title of Contact for this Grant'
+        optional: yes
+      phoneContact:
+        type: String
+        label: 'Contact Phone Number and Email Address'
+        optional: yes
+      totalPaidAttendance:
+        type: Number
+        label: 'Total Paid Attendance'
+        optional: yes
+      totalFreeAttendance:
+        type: Number
+        label: 'Total Free Attendance'
+        optional: yes
+      totalAttendance:
+        type: Number
+        label: 'Total Attendance'
+        optional: yes
+      childrenUnder18Paid:
+        type: Number
+        label: 'Children 18 and Under Paid Attendance'
+        optional: yes
+      childrenUnder18Free:
+        type: Number
+        label: 'Children 18 and Under Free Attendance'
+        optional: yes
+      totalChildrenServed:
+        type: Number
+        label: 'TOTAL CHILDREN SERVED 18 AND UNDER'
+        optional: yes
+
 
     OrganizationalIntroSubschema = new SimpleSchema
       orgSnapshot:
@@ -276,6 +468,14 @@ ORGANIZATIONAL CAPACITY
       timeModified:
         type: Date
         autoValue: -> new Date()
+      generalInfo:
+        type: GeneralInfoSubschema
+        label: 'General Information'
+        optional: yes
+      participation:
+        type: ParticipationSubschema
+        label: 'Organizational Participation (# of People)'
+        optional: yes
       organizationalIntro:
         type: OrganizationalIntroSubschema
         label: 'Organizational Introduction'

@@ -1,6 +1,8 @@
     Template.applicationEdit.helpers
       sectionProperty: ->
         (Session.get 'section')?.property
+      sectionDescription: ->
+        (Session.get 'section')?.description
       doc: -> this.userApplication
       localTimeModified: ->
         moment(this.userApplication.timeModified).format 'dddd, MMMM Do YYYY, h:mm:ss a'

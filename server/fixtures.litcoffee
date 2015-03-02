@@ -8,8 +8,19 @@
         shortcode: 'comm-arts-dev'
         deadlineDate: new Date Date.UTC 2015, 5, 25
         sections: [
+          property: 'generalInfo'
+          label: 'General Information'
+        ,
+          property: 'participation'
+          label: 'Organizational Participation'
+          description: 'Please provide below the following information regarding your Organization from July 1, 2014 through March 31, 2015'
+        ,
           property: 'organizationalIntro'
           label: 'Organizational Introduction'
+          description: 'This section of the application is designed to provide
+          grant review panelists with basic information about your organization.
+          Remember, this is likely a panelist’s first look at your organization.
+          Be brief, clear and direct.'
         ,
           property: 'publicBenefitAndAccess'
           label: 'Public Benefit and Access'
@@ -28,8 +39,12 @@
         shortcode: 'gen-op-support'
         deadlineDate: new Date Date.UTC 2015, 6, 30
         sections: [
-          property: 'organizationalIntro'
-          label: 'Organizational Introduction'
+          property: 'generalInfo'
+          label: 'General Information'
+        ,
+          property: 'participation'
+          label: 'Organizational Participation'
+          description: 'Please provide below the following information regarding your Organization from July 1, 2014 through March 31, 2015'
         ,
           property: 'publicBenefitAndAccess'
           label: 'Public Benefit and Access'
