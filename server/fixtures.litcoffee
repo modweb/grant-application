@@ -81,20 +81,20 @@
           property: 'publicBenefitAndAccess'
           label: 'Public Benefit and Access'
         ,
-          property: 'publicBenefitAndAccessGoals'
-          label: 'Public Benefit and Access (Goals)'
-        ,
           property: 'artisticAndCulturalVibrancy'
           label: 'Artistic and Cultural Vibrancy'
-        ,
-          property: 'artisticAndCulturalVibrancyGoals'
-          label: 'Artistic and Cultural Vibrancy (Goals)'
         ,
           property: 'organizationalCapacity'
           label: 'Organizational Capacity'
         ,
-          property: 'organizationalCapacityGoals'
-          label: 'Organizational Capacity (Goals)'
+          property: 'organizationalGoals'
+          label: 'Organizational Goals'
+          description: 'LOOKING FORWARD: 2015-2016 ORGANIZATIONAL GOALS Note:
+          You will be asked to track and share your progress on each of these
+          questions in your 2015-16 year-end report. Identify your institutional
+          goals and outcomes and the ways you plan to measure them in the next
+          year as they relate to the following funding criteria. These
+          goals/outcomes should be easily attainable from your strategic plan.'
         ,
           property: 'attachments'
           label: 'Attachments'

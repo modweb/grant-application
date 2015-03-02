@@ -423,34 +423,55 @@ ORGANIZATIONAL CAPACITY
 
 
     GoalsSubschema = new SimpleSchema
-      primaryGoals:
+      primaryGoalsPublicBenefit:
         type: String
-        label: 'Primary goals: (Up to 500 total characters, about 100 words)'
+        label: 'Public Benefit and Access: These goals should be related to your
+        program’s impact in the community and linkage with your mission. Primary
+        goals: (Up to 500 total characters, about 100 words)'
         max: 500
         autoform:
           rows: 3
         optional: yes
-      demonstrateProgress:
+      demonstrateProgressPublicBenefit:
         type: String
-        label: 'In what ways will you measure and demonstrate progress? (Up to
+        label: 'Public Benefit and Access: In what ways will you measure and demonstrate progress? (Up to
+        750 total characters, about 150 words)'
+        autoform:
+          rows: 4
+        optional: yes
+      primaryGoalsArtisticVibrancy:
+        type: String
+        label: 'Artistic and Cultural Vibrancy: Creating quality, mission-driven
+        work that inspires and challenges the community. Primary goals: (Up to
+        500 total characters, about 100 words)'
+        max: 500
+        autoform:
+          rows: 3
+        optional: yes
+      demonstrateProgressArtisticVibrancy:
+        type: String
+        label: 'Artistic and Cultural Vibrancy: In what ways will you measure and demonstrate progress? (Up to
+        750 total characters, about 150 words)'
+        autoform:
+          rows: 4
+        optional: yes
+      primaryGoalsOrganizationalCapacity:
+        type: String
+        label: 'Organizational Capacity: Managing for today and tomorrow. Primary
+        goals: (Up to 500 total characters, about 100 words)'
+        max: 500
+        autoform:
+          rows: 3
+        optional: yes
+      demonstrateProgressOrganizationalCapacity:
+        type: String
+        label: 'Organizational Capacity: In what ways will you measure and demonstrate progress? (Up to
         750 total characters, about 150 words)'
         autoform:
           rows: 4
         optional: yes
 
-Attachments
 
-    AttachmentsSubschema = new SimpleSchema
-      excelFinancials:
-        type: String
-        label: 'Please provide information regarding your organization’s current annual budget:
-          1) Total amount budgeted for the current fiscal year; 2) Actual figures as on March 31, 2015; 3) Projections for the end of the fiscal year
-        Click here to download the excel financial budget form. When you have
-        completed it, save and upload below.(max 16MB)'
-        autoform:
-          afFieldInput:
-            type: 'fileUpload'
-            collection: 'Attachments'
 ## Application Schemas
 
     @GeneralSupportApplicationsSchema = new SimpleSchema
@@ -497,27 +518,17 @@ Attachments
         type: PublicBenefitAndAccessSubschema
         label: 'Public Benefit and Access'
         optional: yes
-      publicBenefitAndAccessGoals:
-        type: GoalsSubschema
-        label: 'Public Benefit and Access: These goals should be related to your
-        program’s impact in the community and linkage with your mission.'
-        optional: yes
       artisticAndCulturalVibrancy:
         type: ArtisticAndCulturalVibrancySubschema
         label: 'Artistic and Cultural Vibrancy'
-        optional: yes
-      artisticAndCulturalVibrancyGoals:
-        type: GoalsSubschema
-        label: 'Artistic and Cultural Vibrancy: Creating quality, mission-driven
-        work that inspires and challenges the community.'
         optional: yes
       organizationalCapacity:
         type: OrganizationalCapacitySubschema
         label: 'Organizational Capacity'
         optional: yes
-      organizationalCapacityGoals:
+      organizationalGoals:
         type: GoalsSubschema
-        label: 'Organizational Capacity: Managing for today and tomorrow.'
+        label: 'Organizational Goals'
         optional: yes
       annualBudgetAttachment:
         type: String
