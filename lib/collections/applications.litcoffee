@@ -111,6 +111,8 @@ if/when they're supported.
         label: 'Number of Board Members Making an Annual Financial Gift to your Organization'
         optional: yes
 
+- - -
+
     ParticipationSubschema = new SimpleSchema
       totalPaidAttendance:
         type: Number
@@ -206,33 +208,12 @@ GENERAL INFORMATION
         optional: yes
       phoneContact:
         type: String
-        label: 'Contact Phone Number and Email Address'
+        label: 'Contact Phone Number'
         optional: yes
-      totalPaidAttendance:
-        type: Number
-        label: 'Total Paid Attendance'
-        optional: yes
-      totalFreeAttendance:
-        type: Number
-        label: 'Total Free Attendance'
-        optional: yes
-      totalAttendance:
-        type: Number
-        label: 'Total Attendance'
-        optional: yes
-      childrenUnder18Paid:
-        type: Number
-        label: 'Children 18 and Under Paid Attendance'
-        optional: yes
-      childrenUnder18Free:
-        type: Number
-        label: 'Children 18 and Under Free Attendance'
-        optional: yes
-      totalChildrenServed:
-        type: Number
-        label: 'TOTAL CHILDREN SERVED 18 AND UNDER'
-        optional: yes
-
+      emailContact:
+        type: String
+        label: 'Contact Email Address'
+        optional:yes
 
     OrganizationalIntroSubschema = new SimpleSchema
       orgSnapshot:
