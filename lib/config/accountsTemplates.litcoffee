@@ -22,6 +22,8 @@
       homeRoutePath: '/myApplications'
       redirectTimeout: 4000
 
+      defaultLayout: 'layoutNoContainer'
+
       texts:
         navSignIn: 'Sign In'
         navSignOut: 'Logout'
