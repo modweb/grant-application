@@ -1,3 +1,3 @@
     Template.dateUTC.helpers
       dateUTCPretty: ->
-        (moment.utc this.value).format 'MMM Do, gggg'
+        (moment this.value).format 'MMM Do, gggg, h:mm A'
