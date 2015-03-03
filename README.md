@@ -5,8 +5,12 @@ partnership with [CreativeFuse Initiative](http://creativefuse.org)
 
 ## Notes
 
-### Deadlines
+### admin and superadmin
 
-The `deadlineDate` property is stored as UTC. It's easiest to set this date to 1 day past the actual deadline of the application to allow for a safe buffer with respect to timezones. If your application requires an exact deadline time, be sure to specify the time zone in the user interface.
+Change the passwords immediately on a production deploy.
+
+Log in and then run from the console:
+
+`Accounts.changePassword('asdfasdf', 'NEWPASSWORD')`
 
 Built with [Liftoff](https://github.com/jfols/liftoff)
