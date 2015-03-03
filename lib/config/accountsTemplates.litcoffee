@@ -19,9 +19,6 @@
       positiveFeedback: true
       showValidating: true
 
-      privacyUrl: 'privacy'
-      termsUrl: 'terms-of-use'
-
       homeRoutePath: '/myApplications'
       redirectTimeout: 4000
 
