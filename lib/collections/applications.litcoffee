@@ -221,9 +221,9 @@ GENERAL INFORMATION
         label: 'Organizational Snapshot: Imagine you cross paths with someone in
         your community who is not familiar with your organization and the value
         you provide in the community. This encounter could be with the CEO of a
-        local company, or a new community resident. What is the 30-second
+        local company or a new community resident. What is the 30-second
         “elevator speech” you would share that best describes your organization,
-        your role in the community, and why this person should care. (Up to 500
+        your role in the community, and why this person should care? (Up to 500
         total characters, about 100 words.)'
         max: 500
         autoform:
@@ -263,10 +263,10 @@ PUBLIC BENEFIT AND ACCESS
         type: String
         label: 'Define the community or communities your organization serves and
         provides access for. Describe the ways your organization responds to the
-        needs/values of identified participants? What socio-economic data,
+        needs/values of identified participants. What socio-economic data,
         geographic location, behaviors, attitudes, and other relevant
         descriptive indicators does your organization use when thinking about
-        and reaching out to serve new people. If you present/produce in a
+        and reaching out to serve new people? If you present/produce in a
         variety of locations, what are your goals for doing so? What strategies
         do you use to help participants connect fully with your work? (Up to
         2,000 total characters, about 400 words)'
@@ -299,12 +299,12 @@ PUBLIC BENEFIT AND ACCESS
         optional: yes
       improveCommunity:
         type: String
-        label: 'In what ways did your organization improve or benefit the
+        label: "In what ways did your organization improve or benefit the
         community during 2014-15? What data and knowledge have you collected
-        about the participant’s needs and what is important to them? In what
+        about the participants' needs and what is important to them? In what
         ways will this knowledge influence the way your organization operates
         and develops programming in the future? (Up to 1,000 total characters,
-        about 200 words)'
+        about 200 words)"
         max: 1000
         autoform:
           rows: 5
@@ -317,7 +317,7 @@ ARTISTIC AND CULTURAL VIBRANCY
         type: String
         label: 'Describe how your organization developed its 2014-15 public
         programming. Who was involved in the process of implementing your
-        organization’s vision for 2014-15. What strategies did you use to
+        organization’s vision for 2014-15? What strategies did you use to
         collect feedback from key constituents (ticket buyers, board members,
         staff, donors, etc.)? How were final programming decisions made? (Up to
         1,000 total characters, about 200 words)'
@@ -338,7 +338,7 @@ ARTISTIC AND CULTURAL VIBRANCY
         type: String
         label: 'What standards do you use to measure and evaluate the artistic
         excellence of programming? How do you know that your organization is
-        keeping pace with (or leading) in your respective field? (Up to 1,000
+        keeping pace with (or leading in) your respective field? (Up to 1,000
         total characters, about 200 words)'
         max: 1000
         autoform:
@@ -354,7 +354,7 @@ ORGANIZATIONAL CAPACITY
         track success and make strategic changes as necessary? In what ways do
         you communicate your plans and strategic goals to the community? (For
         example, website, social media, brochure, annual meeting, etc.) Who
-        leads and manages this process (internally, and externally)? Who is
+        leads and manages this process (internally and externally)? Who is
         involved in determining the annual budget to support the plan? What is
         your process for ensuring sound fiscal management? (Up to 1,500 total
         characters, about 300 words)'
@@ -365,8 +365,8 @@ ORGANIZATIONAL CAPACITY
       fundraisingStrategies:
         type: String
         label: 'Briefly describe your fundraising strategies. In what ways are
-        diversifying funding streams – individual donors, corporations,
-        foundations, public support, earned income, etc. In what ways are you
+        you diversifying funding streams (individual donors, corporations,
+        foundations, public support, earned income, etc.)? In what ways are you
         tracking donor and box office data trends to increase engagement and
         income? (Up to 1,000 total characters, about 200 words)'
         autoform:
@@ -396,7 +396,7 @@ ORGANIZATIONAL CAPACITY
         type: String
         label: 'In what ways are you addressing and overcoming challenges with
         organizational capacity, such as staff turnover, marketing challenges,
-        or financial/fundraising challenges, etc. (Up to 750 total characters,
+        or financial/fundraising challenges, etc.? (Up to 750 total characters,
         about 150 words)'
         autoform:
           rows: 4
