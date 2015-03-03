@@ -72,3 +72,9 @@
 #at-btn {
   background-color: #4285F4
 }
+
+/* setting max-width to "main" class and centering content */
+.main {
+  max-width: 930px;
+  margin: 0 auto;
+}
