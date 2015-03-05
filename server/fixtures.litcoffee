@@ -4,9 +4,9 @@
 
     if MetaApplications.find().count() is 0
       metaApplications = [
-        name: 'Community Arts Development Grant Application'
+        name: '2015 Community Arts Development Grant Application'
         shortcode: 'comm-arts-dev'
-        deadlineDate: new Date 2015, 3, 23, 23, 59
+        deadlineDate: new Date Date.UTC 2015, 3, 24, 3, 59
         sections: [
           property: 'generalInfo'
           label: 'General Information'
@@ -72,7 +72,7 @@
       ,
         name: '2015 General Operating Support Grant Application'
         shortcode: 'gen-op-support'
-        deadlineDate: new Date 2015, 23, 23, 59
+        deadlineDate: new Date Date.UTC 2015, 3, 24, 3, 59
         sections: [
           property: 'generalInfo'
           label: 'General Information'
