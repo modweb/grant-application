@@ -124,7 +124,7 @@ if/when they're supported.
         optional: yes
       totalAttendance:
         type: Number
-        label: 'Total Attendance'
+        label: 'TOTAL ATTENDANCE'
         optional: yes
       childrenUnder18Paid:
         type: Number
@@ -136,7 +136,7 @@ if/when they're supported.
         optional: yes
       totalChildrenServed:
         type: Number
-        label: 'TOTAL CHILDREN SERVED 18 AND UNDER'
+        label: 'TOTAL CHILDREN 18 AND UNDER SERVED'
         optional: yes
       fulltimeEmployees:
         type: Number
@@ -164,7 +164,7 @@ if/when they're supported.
         optional: yes
       boardWithAnnualGift:
         type: Number
-        label: 'Number of Board Members Making an Annual Financial Gift to your Organization'
+        label: 'Number of Board Members Making an Annual Financial Gift to Your Organization'
         optional: yes
 
 GENERAL INFORMATION
@@ -224,7 +224,7 @@ GENERAL INFORMATION
         local company or a new community resident. What is the 30-second
         “elevator speech” you would share that best describes your organization,
         your role in the community, and why this person should care? (Up to 500
-        total characters, about 100 words.)'
+        total characters, about 100 words)'
         max: 500
         autoform:
           rows: 4
@@ -387,7 +387,7 @@ ORGANIZATIONAL CAPACITY
         type: String
         label: 'Explain the role that volunteers (board and non-board) play in
         helping your organization achieve the mission. How does your
-        organization recruit, train, evaluate and retain volunteers? (Up to 750
+        organization recruit, train, evaluate, and retain volunteers? (Up to 750
         total characters, about 150 words)'
         autoform:
           rows: 4
