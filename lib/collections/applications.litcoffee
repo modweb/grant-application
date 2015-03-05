@@ -12,7 +12,7 @@ Sections schema.
       description:
         type: String
         optional: yes
-      template:
+      buttonContent:
         type: String
         optional: yes
 
