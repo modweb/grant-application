@@ -61,5 +61,4 @@ I.e. for the key `_id`.
             value: value
             key: key
 
-        console.log keyValues
         keyValues

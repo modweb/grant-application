@@ -666,12 +666,8 @@ I.e. for the key `_id`.
             key: key
 
         keyValues = _.without keyValues, undefined
-        console.log keyValues
         hasNoMissingFields = _.reduce keyValues, ((memo, keyValue) ->
           memo and !!keyValue.value), yes
-        console.log hasNoMissingFields
-
-return result
 
 ### Submit Application
 
@@ -680,13 +676,21 @@ return result
 lookup application
 
         application = GeneralSupportApplications.findOne id
-        throw new Meteor.Error 'not-found', 'could not find application with id' if not application
+        throw new Meteor.Error 'not-found', "Could not find application with id `#{id}`" if not application
 
-        throw new Meteor.Error 'resubmission', 'can not resubmit application' if application.submitted
+        throw new Meteor.Error 'resubmission', 'Cannot resubmit application.' if application.submitted
 
 check that the user is authorized
 
-        throw new Meteor.Error 'not-authorized', 'only owner can submit the application' if application.userId isnt Meteor.userId()
+        throw new Meteor.Error 'not-authorized', 'Only the owner of an application can submit the application.' if application.userId isnt Meteor.userId()
+
+check if the application has missing fields
+
+        hasNoMissingFields = Meteor.call 'hasNoMissingFields', id
+
+If there are missing fields, return `no`
+
+        throw new Meteor.Error 'missing-fields', 'Application is missing fields, please review your application and submit again.' if not hasNoMissingFields
 
 Submit the application
 
@@ -700,7 +704,7 @@ Submit the application
 
 Bail on the client (i.e. don't try to send email on the client)
 
-        return if Meteor.isClient
+        return yes if Meteor.isClient
 
 Send email to user and Culture Works designated admin
 
@@ -717,6 +721,10 @@ Send email to user and Culture Works designated admin
           html: html
 
         Email.send email
+
+Success!
+
+        return yes
 
 ### Remove all applications (superadmin only)
 
