@@ -1,7 +1,10 @@
     @Attachments = new FS.Collection 'attachments',
       stores: [new FS.Store.GridFS 'attachments']
       filter:
-        maxSize: 16000000, #in bytes
+        maxSize: 16000000
+        onInvalid: (message) ->
+          if Meteor.isClient
+            alert 'File size exceeds 16MB.'
 
     Attachments.allow
       insert: (userId, doc) ->
