@@ -72,3 +72,25 @@
 #at-btn {
   background-color: #4285F4
 }
+
+.print-container {
+  width: auto;
+  margin: 0 5%;
+  padding: 0;
+  border: 0;
+  float: none !important;
+  color: black;
+  background: white;
+  font-size: 12pt;
+  word-wrap: break-word;
+}
+
+.print-container a {
+  font-size: 12pt;
+}
+
+@media print {
+  a[href]:after {
+    content: "";
+  }
+}

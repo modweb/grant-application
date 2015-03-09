@@ -1,5 +1,7 @@
 <template name='preview'>
-  <h3>{{this.metaApplication.name}}</h3>
-  <h3>{{this.userApplication.userEmail}}</h3>
-  {{> autoformObject collection=collection values=this.userApplication metaApplication=this.metaApplication}}
+  <div class="print-container">
+    <h3>{{this.metaApplication.name}}</h3>
+    <h3>{{this.userApplication.userEmail}}</h3>
+    {{> autoformObject collection=collection values=this.userApplication metaApplication=this.metaApplication}}
+  </div>
 </template>
