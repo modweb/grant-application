@@ -48,8 +48,8 @@
           description: "Applicants are required to have a completed Cultural
           Data Project Profile for the most recently completed fiscal year that
           is “Review Complete.” (Go to <a href='http://www.ohculturaldata.org' target='_blank'>www.ohculturaldata.org</a>
-          and log on. Click on Funder’s Reports. Find Culture Works and click
-          the .pdf link.) Save the file and upload below.<br>"
+          and log on. Click on the Funder Reports link found in navigation bar to the left. Find Culture Works and click
+          the “view report” button.  This will generate a PDF of the Culture Works Funder Report.) Save the file and upload below.<br>"
           buttonContent: 'Upload'
         ,
           property: 'financialStatementsAttachment'
@@ -57,16 +57,16 @@
           description: 'Community Arts Development applicants are required to
           submit either Audited Financial Statements with an Auditor’s
           Management Letter, or Financial Statements that have been reviewed by
-          a CPA. Please scan these documents and upload here. (limit 5 documents)'
+          a CPA. Be sure to include your Form 990, this is required. Please scan these documents and upload here. (limit 5 documents)<br>'
           buttonContent: 'Upload'
         ,
           property: 'memorandumUnderstandingAttachment'
           label: "Memorandum of Understanding"
           description: "Applicants must submit a Memorandum of Understanding
           signed by both the Executive Director/CEO and the Board Chair.
-          <a href='http://cultureworks.org/wp-content/uploads/2015/03/MEMORANDUM-OF-UNDERSTANDING.pdf' target='_blank'>Click here</a>
+          <a href='http://cultureworks.org/wp-content/uploads/2015/03/2015-MEMORANDUM-OF-UNDERSTANDING.pdf' target='_blank'>Click here</a>
           to download a .pdf of this agreement to sign. Once signed, scan and
-          upload below."
+          upload below.<br>"
           buttonContent: 'Upload'
         ]
       ,
@@ -123,23 +123,23 @@
           description: "Applicants are required to have a completed Cultural
           Data Project Profile for the most recently completed fiscal year that
           is “Review Complete.” (Go to <a href='http://www.ohculturaldata.org' target='_blank'>www.ohculturaldata.org</a>
-          and log on. Click on Funder’s Reports. Find Culture Works and click
-          the .pdf link.) Save the file and upload below.<br>"
+          and log on. Click on the Funder Reports link found in navigation bar to the left. Find Culture Works and click
+          the “view report” button.  This will generate a PDF of the Culture Works Funder Report.) Save the file and upload below.<br>"
           buttonContent: 'Upload'
         ,
           property: 'financialStatementsAttachment'
           label: 'Financial Statements'
           description: 'General Operating Support applicants are required to
           submit Audited Financial Statements with an Auditor’s Management
-          Letter.  Please scan these documents and upload here.  (limit 5
-          documents)'
+          Letter. Be sure to include your Form 990, this is required. Please scan these documents and upload here. (limit 5
+          documents)<br>'
           buttonContent: 'Upload'
         ,
           property: 'memorandumUnderstandingAttachment'
           label: "Memorandum of Understanding"
           description: "Applicants must submit a Memorandum of Understanding
           signed by both the Executive Director/CEO and the Board Chair.
-          <a href='http://cultureworks.org/wp-content/uploads/2015/03/MEMORANDUM-OF-UNDERSTANDING.pdf' target='_blank'>Click here</a>
+          <a href='http://cultureworks.org/wp-content/uploads/2015/03/2015-MEMORANDUM-OF-UNDERSTANDING.pdf' target='_blank'>Click here</a>
           to download a .pdf of this agreement to sign. Once signed, scan and
           upload below.<br>"
           buttonContent: 'Upload'

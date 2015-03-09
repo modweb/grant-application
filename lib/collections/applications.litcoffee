@@ -57,6 +57,7 @@ if/when they're supported.
       totalPaidAttendance:
         type: Number
         label: 'Total Paid Attendance'
+        regEx: /^[0-9]*/
         optional: yes
       totalFreeAttendance:
         type: Number
@@ -489,7 +490,7 @@ ORGANIZATIONAL CAPACITY
         optional: yes
       participation:
         type: ParticipationSubschema
-        label: 'Organizational Participation (# of People)'
+        label: 'Organizational Participation (Number of people – use numerals only, no commas or other symbols)'
         optional: yes
       organizationalIntro:
         type: OrganizationalIntroSubschema
@@ -530,7 +531,7 @@ ORGANIZATIONAL CAPACITY
       financialStatementsAttachment:
         type: [String]
         optional: yes
-        label: 'Upload Financial documents (max 16MB each)'
+        label: 'Upload Audited Financial Statements and Auditor’s Management Letter (max 16MB each)'
         maxCount: 5
       'financialStatementsAttachment.$':
         autoform:

@@ -12,7 +12,7 @@
         {{> buttonPrint}}
         {{#if submitted}}
           <h3>Application Submitted at {{timeSubmitted}}</h3><br>
-          <div class="alert alert-danger" role="alert">This applicaiton has been submitted and is no longer editable.</div>
+          <div class="alert alert-danger" role="alert">This application has been submitted and is no longer editable.</div>
         {{else}}
           {{> buttonSubmit}}
         {{/if}}
@@ -31,7 +31,7 @@
         {{/if}}
         {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent=buttonContent trimStrings=false }}
       {{else}}
-        <p>Select a section on the left (use the menu button above if it's not visible)</p>
+        <p>Select a section on the left (or choose “My Applications” from the navigation above if the sections aren’t visible).</p>
         <p>By default, the application will save your input automatically. To help alleviate possible data loss however, it's best to always click 'Save Changes' before moving to another section.</p>
       {{/if}}
     </div><!--/main-->
