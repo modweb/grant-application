@@ -8,9 +8,7 @@
         moment(this.userApplication.timeModified).format 'dddd, MMMM Do YYYY, h:mm:ss a'
       buttonContent: ->
         sectionProperty = (Session.get 'section').property
-        console.log this, sectionProperty, ','
         section = _.findWhere this.metaApplication.sections, property: sectionProperty
-        console.log section
         section?.buttonContent or 'Save Changes'
 
     Template.applicationEdit.events

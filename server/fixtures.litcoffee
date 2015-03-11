@@ -54,10 +54,17 @@
         ,
           property: 'financialStatementsAttachment'
           label: 'Financial Statements'
-          description: 'Community Arts Development applicants are required to
-          submit either Audited Financial Statements with an Auditor’s
-          Management Letter, or Financial Statements that have been reviewed by
-          a CPA. Be sure to include your Form 990, this is required. Please scan these documents and upload here. (limit 5 documents)<br>'
+          description: 'General Operating Support applicants are required to
+          submit Audited Financial Statements from the most recently completed
+          fiscal year with an Auditor’s Management Letter included. Please scan
+          both of these documents and upload here.<br>'
+          buttonContent: 'Upload'
+        ,
+          property: 'form990Attachment'
+          label: "Form 990"
+          description: 'General Operating Support applicants are required to
+          submit the Form 990 from the most recently completed fiscal year.
+          Please upload here.<br>'
           buttonContent: 'Upload'
         ,
           property: 'memorandumUnderstandingAttachment'
@@ -129,10 +136,18 @@
         ,
           property: 'financialStatementsAttachment'
           label: 'Financial Statements'
+          description: 'Community Arts Development
+          applicants are required to submit either Audited Financial Statements
+          from the most recently completed fiscal year with an Auditor’s
+          Management Letter included. OR, if Audited Financial Statements are
+          not available, a Financial Statement reviewed by a CPA.<br>'
+          buttonContent: 'Upload'
+        ,
+          property: 'form990Attachment'
+          label: "Form 990"
           description: 'General Operating Support applicants are required to
-          submit Audited Financial Statements with an Auditor’s Management
-          Letter. Be sure to include your Form 990, this is required. Please scan these documents and upload here. (limit 5
-          documents)<br>'
+          submit the Form 990 from the most recently completed fiscal year.
+          Please upload here.<br>'
           buttonContent: 'Upload'
         ,
           property: 'memorandumUnderstandingAttachment'

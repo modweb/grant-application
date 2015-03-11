@@ -531,9 +531,17 @@ ORGANIZATIONAL CAPACITY
       financialStatementsAttachment:
         type: [String]
         optional: yes
-        label: 'Upload Audited Financial Statements and Auditor’s Management Letter (max 16MB each)'
-        maxCount: 5
+        label: 'Upload Audited Financial Statements with Auditor’s Management letter here. (Maximum 16MB)'
+        maxCount: 10
       'financialStatementsAttachment.$':
+        autoform:
+          afFieldInput:
+            type: 'fileUpload'
+            collection: 'Attachments'
+      form990Attachment:
+        type: String
+        optional: yes
+        label: 'Upload IRS Form 990 here. (Maximum 16MB)'
         autoform:
           afFieldInput:
             type: 'fileUpload'
