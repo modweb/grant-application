@@ -531,7 +531,7 @@ ORGANIZATIONAL CAPACITY
       financialStatementsAttachment:
         type: [String]
         optional: yes
-        label: 'Upload Audited Financial Statements with Auditor’s Management letter here. (Maximum 16MB)'
+        label: 'Upload Audited Financial Statements/Auditor’s Management letter OR CPA reviewed Financial Statements here. (Maximum 16MB)'
         maxCount: 10
       'financialStatementsAttachment.$':
         autoform:
