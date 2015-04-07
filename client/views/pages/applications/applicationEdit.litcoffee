@@ -13,6 +13,7 @@
 
     Template.applicationEdit.events
       'click .section-label': (event) ->
+        event.preventDefault()
         Session.set 'section', this
       'click .sections-title': (event) ->
         Session.set 'section', null

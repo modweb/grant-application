@@ -16,7 +16,6 @@ aldeed:autoform
 aldeed:autoform-bs-datepicker
 aldeed:collection2
 momentjs:moment
-raix:handlebar-helpers
 wizonesolutions:underscore-string
 cfs:standard-packages
 cfs:gridfs
@@ -25,3 +24,4 @@ alanning:roles
 email
 reywood:publish-composite
 natestrauser:connection-banner
+raix:handlebar-helpers

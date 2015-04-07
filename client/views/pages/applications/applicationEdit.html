@@ -4,7 +4,7 @@
       <div class='sections-title'><h4>Sections</h4></div>
       <ul class="nav nav-sidebar">
         {{#each metaApplication.sections}}
-          <li class='{{#if $eq property sectionProperty}}active{{/if}}'><a href="#" class='section-label'>{{label}}</a></li>
+          <li class='{{#if $eq property sectionProperty}}active{{/if}}'><a href="javascript:void(0)" class='section-label'>{{label}}</a></li>
         {{/each}}
       </ul>
       {{#with doc}}
