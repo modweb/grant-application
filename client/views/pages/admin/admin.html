@@ -1,11 +1,20 @@
 <template name='admin'>
-  <h3>Browse Applications</h3>
-  {{#if applications}}
-    {{#each applications}}
+  <h3>Submitted Applications</h3>
+  {{#if applicationsSubmitted}}
+    {{#each applicationsSubmitted}}
       {{> applicationAdminListItem}}
     {{/each}}
   {{else}}
-    [ there are zero applications ]
+    <p>There are no submitted applications.</p>
+  {{/if}}
+  <hr>
+  <h3>Unsubmitted Applications</h3>
+  {{#if applicationsUnsubmitted}}
+    {{#each applicationsUnsubmitted}}
+      {{> applicationAdminListItem}}
+    {{/each}}
+  {{else}}
+    <p>There are no unsubmitted applications.</p>
   {{/if}}
   <hr>
   {{#if isInRole 'superadmin'}}
