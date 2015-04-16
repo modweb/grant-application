@@ -12,16 +12,15 @@ useraccounts:bootstrap
 accounts-password
 
 zimme:iron-router-active
-aldeed:autoform
-aldeed:autoform-bs-datepicker
 aldeed:collection2
 momentjs:moment
 wizonesolutions:underscore-string
 cfs:standard-packages
 cfs:gridfs
-yogiben:autoform-file
 alanning:roles
 email
 reywood:publish-composite
 natestrauser:connection-banner
 raix:handlebar-helpers
+aldeed:autoform@5.1.2
+yogiben:autoform-file

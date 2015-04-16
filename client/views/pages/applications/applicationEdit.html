@@ -29,7 +29,7 @@
         {{#if sectionDescription}}
           {{{sectionDescription}}}<br>
         {{/if}}
-        {{> quickForm collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent=buttonContent trimStrings=false }}
+        {{> quickForm id='editApplication' collection='GeneralSupportApplications' autosave=true autosaveOnKeyup=true doc=doc fields=sectionProperty type='update' buttonContent=buttonContent trimStrings=false }}
       {{else}}
         <p>Select a section on the left (or choose “My Applications” from the navigation above if the sections aren’t visible).</p>
         <p>By default, the application will save your input automatically. To help alleviate possible data loss however, it's best to always click 'Save Changes' before moving to another section.</p>
