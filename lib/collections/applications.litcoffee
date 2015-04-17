@@ -724,8 +724,8 @@ Send email to user and Culture Works designated admin
         html += renderedApplication
         email =
           to: userEmail
-          from: 'support@creativefuse.org'
-          bcc: 'support@creativefuse.org'
+          from: 'cwsupport@creativefuse.org'
+          bcc: Meteor.settings.adminEmails
           subject: "Culture Works Application submission successful (#{application._id})"
           html: html
 
