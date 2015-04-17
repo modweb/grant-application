@@ -10,22 +10,5 @@
       {{> buttonPreview}}
     {{/with}}
     <button class='btn btn-success submit-application'>I'm sure, submit application</button>
-    <!-- Modal -->
-    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Submission rejected</h4>
-          </div>
-          <div class="modal-body">
-            Oh no! {{errorMessage}}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
   {{/if}}
 </template>

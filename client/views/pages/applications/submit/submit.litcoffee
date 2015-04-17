@@ -8,5 +8,6 @@
 If there's an error, display the modal and set the error message.
 
           if error?
-            Session.set 'errorMessage', error.reason
-            ($ '#errorModal').modal 'show'
+            sweetAlert 'Oh no!', error.message, 'error'
+          else
+            sweetAlert 'Success!', 'Your application has been submitted. You will receive a confirmation email.', 'success'
