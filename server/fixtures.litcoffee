@@ -178,6 +178,7 @@
 
     superadmin = username: 'superadmin'
     admin = username: 'admin'
+    panelist = username: 'panelist'
 
     if Meteor.users.find(superadmin).count() is 0
       id = createUser superadmin
@@ -187,3 +188,7 @@
       id = createUser admin
       Roles.addUsersToRoles id, ['admin']
       console.log 'created fixture user `admin`'
+    if Meteor.users.find(panelist).count() is 0
+      id = createUser panelist
+      Roles.addUsersToRoles id, ['panelist']
+      console.log 'created fixture user `panelist`'

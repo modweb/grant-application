@@ -1,0 +1,13 @@
+<template name='reviewApplicationListItem'>
+  <div class='jumbotron'>
+    <span class='h4'>{{metaApplication.name}} - </span>
+    {{#with userApplication}}
+      {{userEmail}}<br>
+      {{> buttonPreview}}
+      {{> buttonPrint}}
+      {{#if submitted}}
+        <h3>Submitted {{timeSubmitted}}</h3>
+      {{/if}}
+    {{/with}}
+  </div>
+</template>

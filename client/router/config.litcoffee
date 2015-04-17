@@ -13,6 +13,9 @@
       isAdmin: ->
         Roles.userIsInRole Meteor.userId(), ['admin','superadmin']
         this.next()
+      isPanelist: ->
+        Roles.userIsInRole Meteor.userId(), ['panelist']
+        this.next()
 
 Login filter, except public routes
 
@@ -33,3 +36,6 @@ Admin filter
 
     Router.onBeforeAction filters.isAdmin,
       only: ['admin']
+
+    Router.onBeforeAction filters.isPanelist
+      only: ['panelist']

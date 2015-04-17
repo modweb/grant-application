@@ -38,6 +38,8 @@
       redirect: ->
         if Roles.userIsInRole Meteor.userId(), ['admin', 'superadmin']
           Router.go 'admin'
+        else if Roles.userIsInRole Meteor.userId(), ['panelist']
+          Router.go 'reviewApplications'
         else
           Router.go 'myApplications'
     AccountsTemplates.configureRoute 'changePwd'

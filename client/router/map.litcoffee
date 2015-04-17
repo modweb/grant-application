@@ -33,6 +33,8 @@ https://github.com/alanning/meteor-roles/issues/61 is fixed.
     Router.route 'submit',
       path: 'application/submit/:_id'
       controller: 'RouteControllers.userApplication'
+    Router.route 'reviewApplications',
+      controller: 'RouteControllers.admin'
 
 Admin routes
 

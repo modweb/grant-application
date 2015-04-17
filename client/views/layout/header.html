@@ -9,7 +9,11 @@
               {{#if isInRole 'admin'}}
                 <li class='{{isActiveRoute regex="admin"}}'><a href='{{pathFor "admin"}}'>Admin</a></li>
               {{else}}
-                <li class='{{isActiveRoute regex="myApplications"}}'><a href='{{pathFor "myApplications"}}'>My Applications</a></li>
+                {{#if isInRole 'panelist'}}
+                  <li class='{{isActiveRoute regex="reviewApplications"}}'><a href='{{pathFor "reviewApplications"}}'>Review Applications</a></li>
+                {{else}}
+                  <li class='{{isActiveRoute regex="myApplications"}}'><a href='{{pathFor "myApplications"}}'>My Applications</a></li>
+                {{/if}}
               {{/if}}
               <li class='logout'><a href='{{pathFor "atSignIn"}}'>Logout</a></li>
             {{/if}}

@@ -1,0 +1,10 @@
+<template name='reviewApplications'>
+  {{#if applicationsSubmitted}}
+    <h3>Submitted Applications</h3>
+    {{#each applicationsSubmitted}}
+      {{> reviewApplicationListItem}}
+    {{/each}}
+  {{else}}
+    <h3>No applications have been submitted</h3>
+  {{/if}}
+</template>

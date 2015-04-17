@@ -6,7 +6,7 @@
     Meteor.publishComposite 'userApplication', (id) ->
       find: ->
         criteria = _id: id
-        if Roles.userIsInRole this.userId, ['admin','superadmin']
+        if Roles.userIsInRole this.userId, ['admin','superadmin', 'panelist']
           GeneralSupportApplications.find criteria
         else
           criteria = _.extend criteria,
@@ -26,5 +26,5 @@
       Attachments.find _id: $in: attachmentIds
 
     Meteor.publish 'allUserApplications', ->
-      if Roles.userIsInRole this.userId, ['admin','superadmin']
+      if Roles.userIsInRole this.userId, ['admin','superadmin', 'panelist']
         GeneralSupportApplications.find()
