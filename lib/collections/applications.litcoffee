@@ -746,3 +746,19 @@ Success!
         else
           throw new Meteor.Error 'access-denied', 'you must be a superadmin to
           remove all applications.'
+
+### Revert Application
+
+      revertApplication: (applicationId) ->
+
+        if Roles.userIsInRole Meteor.userId(), ['superadmin', 'admin']
+          criteria = _id: applicationId
+          modifier =
+            $set:
+              submitted: no
+            $unset:
+              timeSubmitted: new Date()
+          GeneralSupportApplications.update criteria, modifier
+        else
+          throw new Meteor.Error 'access-denied', 'you must be an admin or
+          superadmin to revert and application.'
