@@ -6,8 +6,6 @@
 standard-app-packages
 iron:router
 coffeescript
-mizzao:bootstrap-3
-html5cat:bootstrap-material-design
 useraccounts:bootstrap
 accounts-password
 zimme:iron-router-active
@@ -24,3 +22,4 @@ raix:handlebar-helpers
 aldeed:autoform@5.1.2
 yogiben:autoform-file
 kevohagan:sweetalert
+fezvrasta:bootstrap-material-design

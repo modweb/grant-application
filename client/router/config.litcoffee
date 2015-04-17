@@ -37,5 +37,5 @@ Admin filter
     Router.onBeforeAction filters.isAdmin,
       only: ['admin']
 
-    Router.onBeforeAction filters.isPanelist
+    Router.onBeforeAction filters.isPanelist,
       only: ['panelist']

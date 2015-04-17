@@ -10,6 +10,8 @@ https://github.com/alanning/meteor-roles/issues/61 is fixed.
           console.log Meteor.user(), this
           if Roles.userIsInRole Meteor.userId(), ['admin', 'superadmin']
             this.redirect 'admin'
+          else if Roles.userIsInRole Meteor.userId(), ['panelist']
+            this.redirect 'reviewApplications'
           else
             this.redirect 'myApplications'
         else
