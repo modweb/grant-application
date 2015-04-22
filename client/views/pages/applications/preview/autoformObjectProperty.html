@@ -2,7 +2,7 @@
   {{#if label}}
     <b>{{label}}</b>
     <p>
-      {{#if value}}
+      {{#if isNotBlank}}
         {{#if fileUpload}}
           {{#each uploadIds}}
             {{> uploadPreview}}<br>

@@ -1,4 +1,5 @@
     Template.autoformObjectProperty.helpers
+      isNotBlank: -> this.value isnt undefined
       fileUpload: ->
 
 Remove all null values

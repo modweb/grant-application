@@ -675,7 +675,7 @@ I.e. for the key `_id`.
 
         keyValues = _.without keyValues, undefined
         hasNoMissingFields = _.reduce keyValues, ((memo, keyValue) ->
-          memo and !!keyValue.value), yes
+          memo and keyValue.value isnt undefined), yes
 
 ### Submit Application
 
