@@ -30,7 +30,6 @@
     Template.uploadPreview.helpers
       fileUpload: ->
        try
-          console.log this
           collection = Attachments
           filefs = Attachments.findOne this
           return null if not filefs?

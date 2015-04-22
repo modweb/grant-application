@@ -25,6 +25,8 @@ Get the userApplication values
 
         values = this.values
 
+        console.log values
+
 Map the keys to the values of the userApplication, value is null for missing
 values. For schema keys that contain a section that isn't a part of the
 metaApplication.sections return null.
@@ -61,4 +63,5 @@ I.e. for the key `_id`.
             value: value
             key: key
 
+        console.log keyValues
         keyValues
