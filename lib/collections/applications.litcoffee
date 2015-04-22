@@ -57,7 +57,6 @@ if/when they're supported.
       totalPaidAttendance:
         type: Number
         label: 'Total Paid Attendance'
-        regEx: /^[0-9]*/
         optional: yes
       totalFreeAttendance:
         type: Number
